@@ -1,11 +1,34 @@
 <h1><%= @place.name %></h1>
 
+<!--
 <ul>
   <% for post in @place.posts %>
-    <li>
-    <%= "#{post.last_name}, #{post.first_name}" %></li>
+    <p>
+      <%= "#{post.title}" %>
+      <%= "#{post.posted_on}" %>
+      <%= "#{post.description}" %>
+    </p>
   <% end %>
 </ul>
+-->
+
+  <% for post in @place.posts %>
+    <b>
+      <%= "#{post.title}" %>
+    </b>
+  <% end %>
+
+  <% for post in @place.posts %>
+    <p>
+      <%= "#{post.posted_on}" %>
+    </p>
+  <% end %>
+
+  <% for post in @place.posts %>
+    <p>
+      <%= "#{post.description}" %>
+    </p>
+  <% end %>
 
 <p>
   <a href="/posts/new?place_id=<%= @place.id %>">New Post</a>
